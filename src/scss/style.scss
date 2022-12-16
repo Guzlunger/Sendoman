@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato"),
+  url("../fonts/Lato-Regular.woff2") format('woff2')
+  url("../fonts/Lato-Regular.woff") format('woff')
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Lato"),
+  url("../fonts/Lato-Medium.woff2") format('woff2'),
+  url("../fonts/Lato-Medium.woff") format('woff')
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Lato"),
+  url("../fonts/Lato-SemiBold.woff2") format('woff2'),
+  url("../fonts/Lato-SemiBold.woff") format('woff')
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Lato"),
+  url("../fonts/Lato-Bold.woff2") format('woff2'),
+  url("../fonts/Lato-Bold.woff") format('woff')
+}
+@font-face {
+  font-family: "Noah";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noah"),
+  url("../fonts/Noah-Regular.woff2") format('woff2'),
+  url("../fonts/Noah-Regular.woff") format('woff')
+}
+@font-face {
+  font-family: "Noah";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noah"),
+  url("../fonts/Noah-Bold.woff2") format('woff2'),
+  url("../fonts/Noah-Bold.woff") format('woff')
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+li {
+  padding-left: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.page-header {
+  max-height: 130px;
+  padding: 39px 0;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  margin-left: 88px;
+  position: relative;
+  &::before {
+    content: url(../img/hidden-menu.svg);
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    left: -21px;
+    top: 3px;
+  }
+  .header-menu__item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3A3A3A;
+    & + .header-menu__item {
+      margin-left: 20px;
+    }
+    &:nth-child(2) {
+      margin-left: 38px;
+      position: relative;
+      &::before {
+        content: url(../img/lightning.svg);
+        position: absolute;
+        left: -18px;
+      }
+    }
+    &:nth-child(7) {
+      margin-left: 30px;
+      position: relative;
+      &::before {
+        content: url(../img/support.svg);
+        position: absolute;
+        left: -19px;
+      }
+    }
+  }
+}
+
+.header-basket {
+  margin-left: 67px;
+  display: flex;
+  .header-basket__count {
+    margin-left: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    background-color: #1489FF;
+    border-radius: 50%;
+  }
+}
+
+
+.descr__title {
+  span {
+    color: #1489FF;
+  }
+}
+.descr__text {
+  max-width: 635px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #3A3A3A;
+}
+
+.main {
+  .container {
+    display: flex;
+  }
+}
+
+.product {
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  .product__text {
+    max-width: 234px;
+  }
+  .product__price {
+    display: flex;
+    flex-direction: column;
+  }
+  .product__slogan {
+    font-family: "Noah";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+    color: #3A3A3A;
+  }
+}
